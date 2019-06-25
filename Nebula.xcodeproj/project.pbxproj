@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304D99AF22C1AC18007EF49F /* PlatformCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 304D99AE22C1AC18007EF49F /* PlatformCommon.framework */; };
+		304D99B222C1AE8C007EF49F /* SwiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D99B122C1AE8C007EF49F /* SwiftResponse.swift */; };
+		304D99B422C1B036007EF49F /* StringKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304D99B322C1B036007EF49F /* StringKeys.swift */; };
 		30F0B3A922C19B84004673A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0B3A822C19B84004673A2 /* AppDelegate.swift */; };
 		30F0B3AB22C19B85004673A2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0B3AA22C19B85004673A2 /* PostsViewController.swift */; };
 		30F0B3AD22C19B85004673A2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0B3AC22C19B85004673A2 /* SecondViewController.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		304D99AE22C1AC18007EF49F /* PlatformCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlatformCommon.framework; path = Carthage/Build/iOS/PlatformCommon.framework; sourceTree = "<group>"; };
+		304D99B122C1AE8C007EF49F /* SwiftResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftResponse.swift; sourceTree = "<group>"; };
+		304D99B322C1B036007EF49F /* StringKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringKeys.swift; sourceTree = "<group>"; };
 		30F0B3A522C19B84004673A2 /* Nebula.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nebula.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F0B3A822C19B84004673A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F0B3AA22C19B85004673A2 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				304D99AF22C1AC18007EF49F /* PlatformCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +67,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		304D99AD22C1AC18007EF49F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				304D99AE22C1AC18007EF49F /* PlatformCommon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		304D99B022C1AE6E007EF49F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				304D99B122C1AE8C007EF49F /* SwiftResponse.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		30F0B39C22C19B84004673A2 = {
 			isa = PBXGroup;
 			children = (
 				30F0B3A722C19B84004673A2 /* Nebula */,
 				30F0B3BE22C19B86004673A2 /* NebulaTests */,
 				30F0B3A622C19B84004673A2 /* Products */,
+				304D99AD22C1AC18007EF49F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +105,7 @@
 		30F0B3A722C19B84004673A2 /* Nebula */ = {
 			isa = PBXGroup;
 			children = (
+				304D99B022C1AE6E007EF49F /* Networking */,
 				30F0B3CB22C19C0F004673A2 /* Posts */,
 				30F0B3A822C19B84004673A2 /* AppDelegate.swift */,
 				30F0B3AC22C19B85004673A2 /* SecondViewController.swift */,
@@ -88,6 +113,7 @@
 				30F0B3B122C19B86004673A2 /* Assets.xcassets */,
 				30F0B3B322C19B86004673A2 /* LaunchScreen.storyboard */,
 				30F0B3B622C19B86004673A2 /* Info.plist */,
+				304D99B322C1B036007EF49F /* StringKeys.swift */,
 			);
 			path = Nebula;
 			sourceTree = "<group>";
@@ -136,6 +162,7 @@
 				30F0B3A122C19B84004673A2 /* Sources */,
 				30F0B3A222C19B84004673A2 /* Frameworks */,
 				30F0B3A322C19B84004673A2 /* Resources */,
+				304D99AC22C1A856007EF49F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -222,6 +249,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		304D99AC22C1A856007EF49F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PlatformCommon.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		30F0B3A122C19B84004673A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -230,6 +279,8 @@
 				30F0B3AD22C19B85004673A2 /* SecondViewController.swift in Sources */,
 				30F0B3CE22C19C33004673A2 /* PostsModel.swift in Sources */,
 				30F0B3A922C19B84004673A2 /* AppDelegate.swift in Sources */,
+				304D99B222C1AE8C007EF49F /* SwiftResponse.swift in Sources */,
+				304D99B422C1B036007EF49F /* StringKeys.swift in Sources */,
 				30F0B3AB22C19B85004673A2 /* PostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +444,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Nebula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,6 +465,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Nebula/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

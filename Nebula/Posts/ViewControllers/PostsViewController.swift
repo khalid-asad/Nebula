@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import PlatformCommon
 
 class PostsViewController: UIViewController {
 
+    private var model: PostsModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        model = PostsModel()
+        
+        model.fetchData(completion: {
+            _ in
+        })
     }
 
-
+    
 }
 
