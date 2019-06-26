@@ -23,11 +23,11 @@ class SwiftResponse: Codable {
 class SwiftResponseData: Codable {
     let modhash: String
     let dist: Int
-    let children: [Child]
+    let children: [Article]
     let after: String
     let before: JSONNull?
     
-    init(modhash: String, dist: Int, children: [Child], after: String, before: JSONNull?) {
+    init(modhash: String, dist: Int, children: [Article], after: String, before: JSONNull?) {
         self.modhash = modhash
         self.dist = dist
         self.children = children
@@ -36,19 +36,19 @@ class SwiftResponseData: Codable {
     }
 }
 
-// MARK: - Child
-class Child: Codable {
+// MARK: - Article
+class Article: Codable {
     let kind: Kind
-    let data: ChildData
+    let data: ArticleData
     
-    init(kind: Kind, data: ChildData) {
+    init(kind: Kind, data: ArticleData) {
         self.kind = kind
         self.data = data
     }
 }
 
-// MARK: - ChildData
-class ChildData: Codable {
+// MARK: - ArticleData
+class ArticleData: Codable {
     let approvedAtUTC: JSONNull?
     let subreddit: Subreddit
     let selftext, authorFullname: String

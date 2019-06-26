@@ -18,6 +18,7 @@
 		30F0B3B522C19B86004673A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F0B3B322C19B86004673A2 /* LaunchScreen.storyboard */; };
 		30F0B3C022C19B86004673A2 /* NebulaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0B3BF22C19B86004673A2 /* NebulaTests.swift */; };
 		30F0B3CE22C19C33004673A2 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F0B3CD22C19C33004673A2 /* PostsModel.swift */; };
+		30F9B60422C2F14400838BCF /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9B60322C2F14400838BCF /* PostsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		30F0B3BF22C19B86004673A2 /* NebulaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NebulaTests.swift; sourceTree = "<group>"; };
 		30F0B3C122C19B86004673A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30F0B3CD22C19C33004673A2 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
+		30F9B60322C2F14400838BCF /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		30F0B3CB22C19C0F004673A2 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				30F9B60222C2F12A00838BCF /* Views */,
 				30F0B3CC22C19C1D004673A2 /* ViewControllers */,
 				30F0B3CA22C19C05004673A2 /* Models */,
 			);
@@ -150,6 +153,14 @@
 				30F0B3AA22C19B85004673A2 /* PostsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		30F9B60222C2F12A00838BCF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30F9B60322C2F14400838BCF /* PostsTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 				30F0B3A922C19B84004673A2 /* AppDelegate.swift in Sources */,
 				304D99B222C1AE8C007EF49F /* SwiftResponse.swift in Sources */,
 				304D99B422C1B036007EF49F /* StringKeys.swift in Sources */,
+				30F9B60422C2F14400838BCF /* PostsTableViewCell.swift in Sources */,
 				30F0B3AB22C19B85004673A2 /* PostsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,34 +12,23 @@ import PlatformCommon
 
 final class PostsModel {
     
-    // MARK: - ItemStackable
-    enum StackableItem {
-        case image(image: UIImage?, title: String?, filter: String?)
-    }
-    
-    var stackableItems: [PostsModel.StackableItem] = []
-}
-
-// MARK: - Network Requests
-extension PostsModel {
-    
-    func fetchData(completion: @escaping ((FetchInfoState) -> Void)) {
+    func fetchData(completion: @escaping ((FetchInfoState, [Article]?) -> Void)) {
         let baseUrlString = StringKeys.baseUrl.rawValue
         let url = URL(string: baseUrlString + StringKeys.jsonPath.rawValue)
         NetworkRequest.fetchData([SwiftResponse].self, for: url, completionHandler: { (data, error) in
             if let error = error {
                 print("Error: ")
                 print(error)
-                completion(.failure)
+                completion(.failure, nil)
                 return
             }
             guard let data = data else {
                 print("Error getting data: result is nil")
-                completion(.failure)
+                completion(.failure, nil)
                 return
             }
             dump(data)
-            completion(.success)
+            completion(.success, data.first?.data.children)
         })
     }
 }
